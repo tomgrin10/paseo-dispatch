@@ -3,6 +3,7 @@
 ## Project
 
 - This is the trusted, unsandboxed Paseo plugin `paseo-dispatch`.
+- This is a test plugin. Keep `package.json` private; do not publish it to npm or submit it to Paseo Cafe.
 - Keep `paseo-plugin.json`, `package.json`, the README compatibility badge, and install commands aligned.
 - Read the current plugin docs at <https://paseo.sh/docs/plugins> and <https://paseo.sh/docs/plugins/reference> before changing runtime code.
 
@@ -17,5 +18,4 @@
 
 - Run `npm ci`, `npm run verify`, and `npm pack --dry-run` after changes.
 - Do not restart the Paseo daemon. Use `paseo plugin reload paseo-dispatch` for an installed development copy.
-- Publish only from a clean `main`, after confirming the packed file list and auditing it for secrets.
-- Tag the exact published commit as `vX.Y.Z`; never move a published tag.
+- Keep release preparation local unless the repository owner explicitly promotes the plugin out of test status.

@@ -4,10 +4,4 @@
 
 Describe the release briefly.
 
-## Install
-
-```sh
-paseo plugin install npm:paseo-dispatch@X.Y.Z
-```
-
-Requires Paseo 0.9.0 or newer for npm installation.
+This repository is currently a test plugin. Do not publish it to npm or Paseo Cafe without an explicit promotion decision.
