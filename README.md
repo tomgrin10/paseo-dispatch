@@ -1,6 +1,6 @@
 # paseo-dispatch
 
-[![Paseo](https://img.shields.io/badge/Paseo-%E2%89%A5%200.8.0-8A63D2?style=for-the-badge)](https://paseo.sh)
+[![Paseo](https://img.shields.io/badge/Paseo-%E2%89%A5%200.10.1-8A63D2?style=for-the-badge)](https://paseo.sh)
 [![License](https://img.shields.io/github/license/tomgrin10/paseo-dispatch?style=for-the-badge&color=2563eb)](LICENSE)
 
 A Paseo proof of concept for sending a free-form task to the most relevant existing workspace.
@@ -32,6 +32,10 @@ through the Paseo client API supplied by the host.
 ## License
 
 [MIT](LICENSE) © 2026 Tom Gringauz.
+
+## Navigation and display
+
+Open this plugin from Command-K or its sidebar entry. **Overview** and **Display settings** link the main view and settings directly, without opening the Plugins settings page. Hiding a sidebar entry keeps Command-K available.
 
 ## Other plugins
 
