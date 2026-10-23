@@ -12,12 +12,18 @@
   "homepage": "https://github.com/tomgrin10/paseo-dispatch#readme",
   "bugs": "https://github.com/tomgrin10/paseo-dispatch/issues",
   "author": "Tom Gringauz",
-  "keywords": ["paseo", "paseo-plugin", "orchestration", "productivity"],
+  "keywords": [
+    "paseo",
+    "paseo-plugin",
+    "orchestration",
+    "productivity"
+  ],
   "files": [
     "paseo-plugin.json",
     "index.client.tsx",
     "client/",
-    "shared/"
+    "shared/",
+    "index.server.ts"
   ],
   "scripts": {
     "typecheck": "tsc --noEmit",
@@ -25,8 +31,8 @@
     "verify": "npm run typecheck && npm test"
   },
   "devDependencies": {
-    "@getpaseo/client": "0.8.0",
-    "@getpaseo/plugin": "0.8.0",
+    "@getpaseo/client": "0.11.0",
+    "@getpaseo/plugin": "0.11.0",
     "@tanstack/react-query": "^5.90.11",
     "@types/node": "^20.19.17",
     "@types/react": "~19.2.0",

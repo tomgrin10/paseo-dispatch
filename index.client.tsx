@@ -1,9 +1,11 @@
+import { contributeDisplay } from "./client/display";
+import { withNavigation } from "./client/navigation";
 import type { PluginClientContext } from "@getpaseo/plugin/client";
 import { DispatchSurface } from "./client/dispatch";
 
 export default function contribute(client: PluginClientContext) {
-  client.addSurface("dispatch", DispatchSurface);
-  client.addSidebarItem({
+  client.addSurface("dispatch", withNavigation(DispatchSurface, client, "dispatch"));
+  const removeDisplay = contributeDisplay(client, {
     id: "dispatch",
     title: "Dispatch",
     icon: "Send",
@@ -19,5 +21,5 @@ export default function contribute(client: PluginClientContext) {
       openSurface("dispatch");
     },
   });
-  return () => {};
+  return () => { removeDisplay(); };
 }
