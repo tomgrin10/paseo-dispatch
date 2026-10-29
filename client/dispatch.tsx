@@ -1,5 +1,4 @@
-import type { PaseoAgent, PaseoWorkspace } from "@getpaseo/client";
-import type { PluginSurfaceProps } from "@getpaseo/plugin/client";
+import type { PluginClientContext, PluginSurfaceProps } from "@getpaseo/plugin/client";
 import { usePaseo } from "@getpaseo/plugin/client";
 import { Icon, ScrollView, TextInput, useToast } from "@getpaseo/plugin/client/react-native";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
@@ -13,6 +12,10 @@ import {
   type RoutingAgent,
   type RoutingWorkspace,
 } from "../shared/routing";
+
+type PaseoApi = PluginClientContext["paseo"];
+type PaseoAgent = Awaited<ReturnType<PaseoApi["agents"]["list"]>>["entries"][number]["agent"];
+type PaseoWorkspace = Awaited<ReturnType<PaseoApi["workspaces"]["list"]>>["entries"][number];
 
 function toRoutingWorkspace(workspace: PaseoWorkspace): RoutingWorkspace {
   return {

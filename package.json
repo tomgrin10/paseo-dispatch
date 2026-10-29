@@ -23,19 +23,21 @@
     "index.client.tsx",
     "client/",
     "shared/",
-    "index.server.ts"
+    "index.server.ts",
+    "server/"
   ],
   "scripts": {
     "typecheck": "tsc --noEmit",
     "test": "node --test --experimental-strip-types shared/routing.test.ts",
-    "verify": "npm run typecheck && npm test"
+    "verify": "npm run typecheck && npm test && node --test --experimental-strip-types agent-tools.test.mjs && node --test native-tools.test.mjs"
   },
   "devDependencies": {
-    "@getpaseo/client": "0.11.0",
-    "@getpaseo/plugin": "0.11.0",
+    "@getpaseo/client": "0.14.0",
+    "@getpaseo/plugin": "0.14.0",
     "@tanstack/react-query": "^5.90.11",
     "@types/node": "^20.19.17",
     "@types/react": "~19.2.0",
+    "esbuild": "^0.28.2",
     "react": "19.1.0",
     "react-native": "0.81.5",
     "typescript": "^5.9.3",
